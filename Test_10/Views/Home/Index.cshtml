@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-action="Calculate" method="post">
+        <input type="number" name="deposit" placeholder="Сумма вклада" required>
+        <input type="number" name="months" placeholder="Количество месяцев" required>
+        <button type="submit">Рассчитать</button>
+    </form>
+    @if (Model != null)
+    {
+        <p>Конечная сумма вклада: @Model</p>
+    }
+</div>
